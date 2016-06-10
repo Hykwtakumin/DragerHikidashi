@@ -17,6 +17,21 @@ public class DraggableLayout3 extends ViewGroup {
     private View headerView;
     private View view;
 
+    private View handle;
+    private View bground;
+
+    private View btn1;
+    private View btn2;
+    private View btn3;
+    private View btn4;
+
+    private View txt1;
+    private View txt2;
+    private View txt3;
+    private View txt4;
+
+
+
     private float initialMotionY;
 
     private int top;
@@ -59,14 +74,14 @@ public class DraggableLayout3 extends ViewGroup {
                 requestLayout();
             }
 
-            @Override
-            public void onViewReleased(View releasedChild, float xvel, float yvel) {
-                int top = getPaddingTop();
-                if (yvel > 0 || (yvel == 0 && this.self.dragOffset > 0.5f)) {
-                    top += this.self.dragRange;
-                }
-                this.self.viewDragHelper.settleCapturedViewAt(releasedChild.getLeft(), top);
-            }
+//            @Override
+//            public void onViewReleased(View releasedChild, float xvel, float yvel) {
+//                int top = getPaddingTop();
+//                if (yvel > 0 || (yvel == 0 && this.self.dragOffset > 0.5f)) {
+//                    top += this.self.dragRange;
+//                }
+//                this.self.viewDragHelper.settleCapturedViewAt(releasedChild.getLeft(), top);
+//            }
 
             @Override
             public int getViewVerticalDragRange(View child) {
